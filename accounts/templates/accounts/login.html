@@ -19,6 +19,7 @@
                <form method='POST'>
                    {% csrf_token %}
                   <div class="form-group">
+                      {{ form.errors }}
                      <label>User Name</label><br/>
                     {{ form.query }}    
                     </div>

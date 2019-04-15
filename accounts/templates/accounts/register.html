@@ -18,6 +18,7 @@
             <div class="login-form">
                <form method='POST'>
                    {% csrf_token %}
+                   {{ form.errors }}
                   <div class="form-group">
                      <label>User Name</label><br/>
                     {{ form.username }}    

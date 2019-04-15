@@ -121,3 +121,8 @@
     -ms-transform: rotate(-1deg);
     transform: rotate(-1deg);
   }
+  @media screen and (max-width: 450px) {
+  .abc{
+    margin-bottom: 20px;
+  }
+  }

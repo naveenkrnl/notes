@@ -25,13 +25,13 @@
                 <p class='float-right'>You can add your favourite Notes Here..</p>
                 </div>
                 <div class='col-lg-4 col-sm-12'>
-                        <a href="{% url 'logout' %}"><button class="btn btn-outline-secondary">Logout</button></a>
+                        <a href="{% url 'logout' %}"><button class="btn btn-outline-secondary float-right">Logout</button></a>
                 </div>
                 {% else %}
                 <div class='col-lg-4 col-sm-12'>
                         <a href="{% url 'register' %}"><button class="btn btn-outline-secondary float-right">Register</button></a>
                 </div>
-                <div class='col-lg-4 col-sm-12'>
+                <div class='col-lg-4 col-sm-12 mb-4'>
                         <a href="{% url 'login' %}"><button class="btn btn-outline-primary">Login</button></a>
                 </div>
                 {% endif %}

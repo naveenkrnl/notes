@@ -125,4 +125,7 @@
   .abc{
     margin-bottom: 30px;
   }
+  .note-wrap{
+    margin: 0 22px 44px 15px !important; 
+  }
   }

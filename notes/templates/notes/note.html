@@ -14,24 +14,24 @@
         <div class='row'>
 
                 {% if request.user.is_authenticated %}
-                <div class='col-4 col-sm-12'>
+                <div class='col-lg-4 col-sm-12'>
                         <form method="POST" action="">{% csrf_token %}
                                 {{ form.as_p }}
                         <input class='btn btn-success mb-5 center' type="submit" value='Add Note'>
                         </form>
                 </div>
-                <div class='col-4 col-sm-12'>
+                <div class='col-lg-4 col-sm-12'>
                 <h4 class='float-right'><strong>Hello {{ user.username }}</strong></h4><br/>
                 <p class='float-right'>You can add your favourite Notes Here..</p>
                 </div>
-                <div class='col-4 col-sm-12'>
+                <div class='col-lg-4 col-sm-12'>
                         <a href="{% url 'logout' %}"><button class="btn btn-outline-secondary">Logout</button></a>
                 </div>
                 {% else %}
-                <div class='col-4 col-sm-12'>
+                <div class='col-lg-4 col-sm-12'>
                         <a href="{% url 'register' %}"><button class="btn btn-outline-secondary float-right">Register</button></a>
                 </div>
-                <div class='col-4 col-sm-12'>
+                <div class='col-lg-4 col-sm-12'>
                         <a href="{% url 'login' %}"><button class="btn btn-outline-primary">Login</button></a>
                 </div>
                 {% endif %}

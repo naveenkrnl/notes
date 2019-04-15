@@ -12,6 +12,12 @@ User=get_user_model()
 #         context['data']='You are logged in'
 #     return render(request, 'home.html', context)
 
+def check(request):
+    if request.user.is_authenticated:
+        return HttpResponseRedirect('/notes')
+    else:
+        return HttpResponseRedirect('/register')    
+
 def register(request, *args, **kwargs):
     form=UserCreationForm(request.POST or None)
     if form.is_valid():

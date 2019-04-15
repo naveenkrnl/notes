@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<style>
+        body {
+          background: rgba(222,222,222,1);
+          margin: 20px;
+        }
+</style>
+{% endblock css %}
+{% block content %}
+<div class='container center'>
+        <div class='row'>
+
+                {% if request.user.is_authenticated %}
+                <div class='col-4'>
+                        <form method="POST" action="">{% csrf_token %}
+                                {{ form.as_p }}
+                        <input class='btn btn-success mb-5 center' type="submit" value='Add Note'>
+                        </form>
+                </div>
+                <div class='col-4'>
+                <h4 class='float-right'><strong>Hello {{ user.username }}</strong></h4><br/>
+                <p class='float-right'>You can add your favourite Notes Here..</p>
+                </div>
+                <div class='col-4'>
+                        <a href="{% url 'logout' %}"><button class="btn btn-outline-secondary">Logout</button></a>
+                </div>
+                {% else %}
+                <div class='col-4'>
+                        <a href="{% url 'register' %}"><button class="btn btn-outline-secondary float-right">Register</button></a>
+                </div>
+                <div class='col-4'>
+                        <a href="{% url 'login' %}"><button class="btn btn-outline-primary">Login</button></a>
+                </div>
+                {% endif %}
+        </div>
+</div>
+        <ul>
+    <!-- {% if request.user.is_authenticated %} -->
+    {% for note in notes %}
+    {% if note.text is not None %}
+    <aside class="note-wrap note-white">
+    
+            {{ note.text }} <br/>
+            <a style="color:red; font-size:15px; align-content: center;" href='/{{ note.id }}/delete/'>Delete</a>
+           </aside>    
+           {% endif %}
+    {% empty %}
+    No Notes Yet
+    {% endfor %}            
+    <!-- {% endif %} -->
+</ul>
+{% endblock %}
+

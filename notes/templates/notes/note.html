@@ -17,7 +17,7 @@
                 <div class='col-lg-4 col-sm-12'>
                         <form method="POST" action="">{% csrf_token %}
                                 {{ form.as_p }}
-                        <input class='btn btn-success float-sm-right float-lg-left mb-lg-5 mb-sm-1' type="submit" value='Add Note'>
+                        <input class='btn btn-success float-sm-right float-md-right float-lg-left mb-lg-5 mb-sm-1' type="submit" value='Add Note'>
                         </form>
                 </div>
                 <div class='col-lg-4 col-sm-12'>
@@ -25,7 +25,7 @@
                         <p class='float-right'>You can add your favourite Notes Here..</p>
                 </div>
                 <div class='col-lg-4 col-sm-12'>
-                        <a href="{% url 'logout' %}"><button class="btn btn-outline-secondary float-right mb-sm-5 mb-lg-1">Logout</button></a>
+                        <a href="{% url 'logout' %}"><button class="btn btn-outline-secondary float-right mb-sm-5 mb-md-5 mb-lg-1">Logout</button></a>
                 </div>
                 {% else %}
                 <div class='col-lg-4 col-sm-12'>

@@ -121,3 +121,11 @@
     -ms-transform: rotate(-1deg);
     transform: rotate(-1deg);
   }
+  @media screen and (max-width: 450px) {
+  .abc{
+    margin-bottom: 30px;
+  }
+  .note-wrap{
+    margin: 0 22px 44px 15px !important; 
+  }
+  }

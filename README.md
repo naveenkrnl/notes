@@ -6,6 +6,9 @@ visit here - https://notesn.herokuapp.com/
 
 To download the project right on your computer Download the zip file
 
+Create a virtualenv using 
+<pre>virtualenv -p python3 venv</pre>
+
 From Home Directory run command
 
 <pre>pip install -r requirements.txt</pre>
